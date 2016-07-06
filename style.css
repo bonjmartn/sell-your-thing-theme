@@ -1,0 +1,1507 @@
+/*
+Theme Name: Sell Your Thing Free
+Theme URI: https://www.zenwebthemes.com/shop-themes/sell-your-thing/
+Author: Bonnie Martin
+Author URI: https://www.zenwebthemes.com
+Description: Sell Your Thing helps you sell your app, ebook, or other digital product on WordPress. This is the free version.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: left-sidebar, right-sidebar, footer-widgets, custom-colors, custom-menu, featured-images, full-width-template, theme-options
+Text Domain: sell-your-thing-free
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+}
+body {
+	background-color: #ffffff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+	margin-left: .5em;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-size: 14px;
+	font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	margin-bottom: 1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #363636;
+}
+
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 26px;	
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 18px;	
+}
+h5 {
+	font-size: 16px;	
+}
+h6 {
+	font-size: 14px;	
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol, li {
+	margin-left: .5em;
+}
+ul {
+	list-style: disc;
+	margin-bottom: 1.5em;
+}
+ol {
+	list-style: decimal;
+	margin-bottom: 1.5em;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	font-style: italic;
+	margin: 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+hr {
+	border-top: 1px solid #e6e6e6;
+}
+
+/* Content Width Requirement */
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Form Elements */
+
+form,
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+
+/* Gives a basic visual design to form elements */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 2px solid #000000;
+	border-radius: 10px;
+	background: #FFFFFF;
+	color: #000000;
+	text-transform: uppercase;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 14px;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 1;
+	padding: 1.15em 1.75em 1.1em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border: 2px solid #FFFFFF;
+	border-radius: 10px;
+	background: #000000;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+/*	background: rgba( 255, 255, 255, 0.3 );*/
+	border: 1px solid #ccc;
+	border-radius: 0px;
+	padding: 6px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	background: #fff;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a,
+a:visited {
+	color: #337ab7;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #337ab7;
+}
+
+/* Alignment - WordPress uses these classes to align images and other elements inside the editor. */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 1.5em auto;
+}
+
+/* Text meant only for screen readers. It's hidden due to the clip property, but visible in the page source. */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* =CONTAINERS
+----------------------------------------------- */
+
+.page-container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1100px;
+}
+
+.full-container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gray {
+	background-color: #e6e6e6;
+}
+
+/* =Site Header
+----------------------------------------------- */
+
+.main-header { /* The container for the entire header area */
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+/* =Homepage Elements
+----------------------------------------------- */
+
+/* Large Introduction Area */
+
+#main-headline,
+#main-subheadline {
+	color: #FFFFFF;
+	padding: 10px;
+	background-color: #000000;
+	text-align: left;
+	width: 600px;
+}
+
+#main-headline {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+#main-subheadline {
+	font-size: 24px;
+}
+
+button#main-button {
+	border: 2px solid #FFFFFF;
+	background: #000000;
+	color: #FFFFFF;
+	display: block;
+	font-weight: 600;
+}
+
+button#main-button:hover {
+	border: 2px solid #000000;
+	background: #FFFFFF;
+	color: #000000;
+}
+
+#main-image img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+	max-height: 500px;
+}
+
+.intro-background img {
+	width: 100%;
+	display: block;
+}
+
+.home-overlay {
+  position: relative;
+}
+
+.home-text-overlay { /* Text over the large photo */
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-15%, -50%);
+}
+
+.home-text-overlay a,
+.ctabar a {
+	text-decoration: none;
+}
+
+/* These media styles make the large introduction area behave better at various screen sizes.
+   It's not based on specific device screens, but instead on where the layout starts to break and needs adjustment. 
+   Shrink and enlarge your browser to see how it works.
+   If your particular content is causing problems, you can try adjusting these values to make it work better. */
+
+@media screen and (max-width: 1300px) {
+
+	.home-text-overlay {
+	    top: 50%;
+	    left: 20%;
+	    transform: translate(-15%, -50%);
+	}
+
+	#main-image img {
+		max-height: 430px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+
+	#main-headline,
+	#main-subheadline {
+		width: 500px;
+	}
+
+	#main-image img {
+		max-height: 400px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+
+	.home-text-overlay {
+	    left: 15%;
+	}
+
+	#main-headline,
+	#main-subheadline {
+		width: 450px;
+	}
+
+	#main-image img {
+		max-height: 350px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	.home-text-overlay {
+	    left: 15%;
+	    transform: translate(-15%, -50%);
+	}
+
+	#main-headline,
+	#main-subheadline {
+		text-align: left;
+	}
+
+	#main-image img {
+		max-height: 300px;
+	}
+
+	#main-headline {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+
+	#main-subheadline {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.home-text-overlay {
+	    left: 10%;
+	}
+
+	#main-headline,
+	#main-subheadline {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 770px) {
+
+	.home-text-overlay {
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	}
+
+	#main-headline,
+	#main-subheadline {
+		text-align: center;
+	}
+
+	#main-image img {
+		display: none;
+	}
+
+	#main-headline {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+
+	#main-subheadline {
+		font-size: 22px;
+	}
+
+	button#main-button {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: 670px) {
+
+	#main-headline {
+		font-size: 32px;
+		margin-bottom: 10px;
+	}
+
+	#main-subheadline {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	.navbar-brand img {
+		max-width: 220px;
+	}
+}
+
+@media screen and (max-width: 530px) {
+
+	#main-headline {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+
+	#main-subheadline {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	#main-headline {
+		font-size: 28px;
+		margin-bottom: 6px;
+		padding: 5px;
+	}
+
+	#main-subheadline {
+		display: none;
+	}
+
+	#main-headline {
+		width: 300px;
+	}
+
+	.navbar-brand img {
+		max-width: 180px;
+	}
+}
+
+/* Shared Styles for Homepage Elements from Below */
+
+.ctabar h2,
+.features h2,
+.screenshots h2,
+.four-icons h2,
+.reviews h2 {
+	text-align: center;
+	font-size: 26px;
+	font-weight: 600;
+}
+
+.ctabar h3,
+.features h3,
+.four-icons h3,
+.reviews h3 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.ctabar,
+.features,
+.screenshots,
+.four-icons,
+.reviews {
+	padding: 40px 15px;
+	margin-top: 20px;
+}
+
+/* Features */
+
+.features img {
+	display: block;
+	margin: 20px auto;
+}
+
+.features .fa {
+	font-size: 30px;
+	margin-right: 10px;
+	vertical-align: middle;
+	display: inline;
+	float: left;
+}
+
+.feature-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.feature-text {
+	margin-left: 35px;
+}
+
+/* Call to Action Bar */
+
+.ctabar button {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Screenshots */
+
+.screenshots img {
+	display: block;
+	margin: 30px auto;
+	max-height: 400px;
+}
+
+.screenshots-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Four Icons Across */
+
+.four-icons-icon {
+	font-size: 60px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.four-icons-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.four-icons-text {
+	text-align: center;
+}
+
+/* Reviews */
+
+.reviews img {
+	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	max-width: 125px;
+}
+
+.reviews h3 {
+	margin-bottom: 40px
+}
+
+/* =FontAwesome Customizations
+----------------------------------------------- */
+
+.social-widget,
+.social-widget a,
+.social-widget a:visited {
+	color: #FFFFFF;
+	padding: 0 10px;
+	font-size: 1.7em;
+}
+ 
+.social-widget p {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+.social-widget h3 {
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+/* =Bootstrap Nav Customizations
+----------------------------------------------- */
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	background-color: #FFFFFF;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+	margin-left: -27px;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+}
+
+.navbar .navbar-nav>li>a { 
+	color: #363636;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+  
+.navbar-default {
+	border-color: #ffffff;
+	background-color: #ffffff;
+}
+
+/* =Content
+----------------------------------------------- */
+
+/* Styles for posts and pages 
+Some of these are left blank so that you can reference them for your own styling use */
+
+.sticky { /* Style your sticky posts. This class is applied to the same element as .hentry below. */
+	
+}
+.hentry { /* The wrapper for individual posts */
+	margin: 0 0 1.5em;
+	padding-bottom: 1.5em;
+}
+.entry-header { /* Container for the entry title, byline and post date */
+	
+}
+.entry-title, 
+.entry-title a { /* Post titles */
+
+}
+.page-title { /* Page titles */
+
+}
+
+.archives-header {
+	padding: 25px 0 5px 0;
+	margin-bottom: 20px;
+    text-align: center;
+    background-color: #e6e6e6;
+}
+
+.page-header {
+    margin-top: 25px;
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.post-by {
+	margin-bottom: 40px;
+}
+
+body.search .page-title,
+body.archive .page-title { /* Optional, if you want your page titles to look different on search and archive pages */
+
+}
+.entry-meta { /* Container for the entry metadata */
+	clear: both;
+}
+.entry-date { 
+	
+}
+.byline { /* By default, bylines are hidden */
+	display: none;
+}
+.single .byline,
+.group-blog .byline { /* Bylines are displayed on single posts and/or when there are multiple authors */
+	display: inline;
+}
+.cat-links {  /* Styles category links inside the entry meta */
+	
+}
+.tag-links { /* Styles links to tags inside the entry-meta */
+	
+}
+.sep {  /* Separator between category links, cat links, comments links, etc */
+	
+}
+.comments-link {  /* Link to leave a comment */
+	
+}
+.edit-link { /* Link to Edit the post (only shows up for admins) */
+	
+}
+.entry-content,
+.entry-summary { /* Container for the post body/excerpt text */
+	margin: 1.5em 0 0;
+}
+
+/* Styling In-Post Tables */
+.entry-content table,
+.comment-content table {
+	border: 1px solid #000;
+	border-left-width: 0;
+	margin: 0 -0.083em 2.083em 0;
+	text-align: left;
+	width: 100%;
+}
+.entry-content tr th,
+.entry-content thead th,
+.comment-content tr th,
+.comment-content thead th {
+	border-left: 1px solid #000;
+	font-weight: bold;
+	padding: 0.5em 	1.25em;
+}
+.entry-content tr td,
+.comment-content tr td {
+	border: 1px solid #000;
+  	border-width: 1px 0 0 1px;
+	padding: 0.5em 	1.25em;
+}
+.entry-content tr.odd td,
+.comment-content tr.odd td { /* If you want to apply alternate styles to even/odd table rows */
+
+}
+
+.page-links { /* Style the page numbers for multi-page posts (posts that have been split with <!--next-page -->. */
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* =Aside Post Format
+----------------------------------------------- */
+
+/* Just put ".format-aside" before any of the above classes to create special formatting for Aside posts */
+
+.format-aside .entry-content {
+	border-left: 4px solid #000;
+	padding-left: 1em;
+}
+
+/* =Media
+----------------------------------------------- */
+
+/* Styling for images and videos */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+.widget-img,
+img[class*="align"],
+img[class*="wp-image-"],
+.wp-caption img {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+.widget img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley { /* Remove borders and backgrounds from WP smileys */
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption { /* The container for image captions */
+	max-width: 100%;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.alignnone { /* Add spacing around captions and post text */
+	margin-bottom: 1.5em;
+}
+.wp-caption img { /* The image inside the caption container */
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+	font-size: .9em;
+	font-style: italic;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+#content .gallery { /* Container for image galleries */
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+	font-style: italic;
+}
+#content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+#content .gallery dd {
+	margin: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* =Navigation
+----------------------------------------------- */
+
+/* Older/Newer Post Navigation */
+
+.site-content .site-navigation {
+
+}
+
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* Pagination Links */
+
+.pagination {
+	font-size: 14px;
+    line-height: 1;
+    position: relative;
+	display: block;
+}
+
+.pagination ul {
+	margin: 0;
+	padding: 0;
+}
+ 
+.pagination ul li {
+	list-style: none;
+	margin: 0 10px 0 0;
+	padding: 0;
+	float: left;
+}
+ 
+.pagination ul li span.current {
+	padding: 10px 12px;
+	background: #999999;
+	border: 1px solid #363636;
+	display: block;
+	line-height: 1;
+	color: #ffffff;
+	border-radius: 8px;
+}
+ 
+.pagination ul li a {
+	padding: 10px 12px;
+	background: #FFFFFF;
+	color: #363636;
+	text-decoration: none;
+	border: 1px solid #363636;
+	display: block;
+	line-height: 1;
+	border-radius: 8px;
+}
+ 
+.pagination ul li a:hover {
+	background: #999999;
+	border-color: #363636;
+	color: #ffffff;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+#comments { /* Container for the comments section */
+	clear: both;
+}
+.bypostauthor { /* Gives post author comments thier own style */
+	
+}
+.comments-title,
+#reply-title {
+
+}
+.commentlist li {
+	list-style: none;
+}
+.commentlist,
+.children {
+	list-style: none;
+	margin: 0;
+}
+.children { /* Nested comments */
+	margin: 0 0 0 6%;
+}
+
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+
+.comment .reply { /* The "Reply" link under each comment */
+	text-align: right;
+}
+
+
+/* Comment Form */
+.comment-notes,
+#commentform .form-allowed-tags,
+p.nocomments,
+p.logged-in-as,
+#commentform label {
+
+}
+.required { /* The little asterisk next to a required comment field */
+	color: #880000;
+}
+#commentform label { /* The text next to each comment form field */
+	padding: 1em 0;
+}
+
+p.nocomments { /* Message displayed when there are no comments */
+
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+/* Footer Widgets */
+
+.social-widget,
+.social-widget a {
+	color: #FFFFFF;
+	text-align: center;
+	padding: 0 10px;
+	font-size: 1.7em;
+}
+  
+.social-widget {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+.social-widget h3 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.footer-widget-title {
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+footer .widget {
+	margin-top: 0px;
+	color: #FFFFFF;
+}
+
+/* Sidebar Widgets */
+
+.sidebar .widget {
+	border: 1px solid #e6e6e6;
+	padding: 20px;
+}
+
+/* General Widget Stuff */
+
+.widget-area { /* All of the sidebar container divs get this common class */
+	
+}
+
+.widget {
+	margin: 30px 2px 15px 10px;
+}
+
+.widget-title {
+
+}
+
+.widget ul { /* Unordered lists inside widgets */
+	margin: 10px;
+}
+
+
+.widget ul li { /* Unordered list items inside widgets */
+	margin-bottom: 0.25em;
+	margin-left: .5em;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+
+/* Sub-Items in Menu & Categories Widgets. These classes are useful if you want to add special styling, such as indention, to sub-items in your menu and categories widgets. */
+.widget-area .sub-menu,
+.widget-area .children { 
+	margin-left:  1.5em;
+}
+.widget-area .sub-menu li,
+.widget-area .children li {
+
+}
+
+/* Cloud Widgets */
+.wp_widget_tag_cloud div,
+.widget_tag_cloud div {
+	line-height: 1.5;
+	padding: 0.231em 0;
+}
+
+/* RSS Widget */
+.rsswidget img { /* This is the orange RSS icon to the left of the RSS widget title */
+	margin: 0;
+	vertical-align: text-top;
+}
+
+/* Calendar Widget */
+#wp-calendar {
+	width: 100%;
+}
+#wp-calendar caption {
+	font-style: italic;
+}
+#wp-calendar thead th {
+	text-align: center;
+}
+#wp-calendar tbody,
+#wp-calendar tbody td {
+	border: 1px solid #000;
+}
+#wp-calendar tbody {
+	border-left-width: 0;
+}
+#wp-calendar tbody td {
+  	border-width: 1px 0 0 0;
+}
+#wp-calendar tbody td a {
+	font-weight: bold;
+}
+#wp-calendar tbody td:hover {
+
+}
+#wp-calendar tfoot #next {
+	text-align: right;
+}
+#wp-calendar #today {
+	font-weight: bold;
+}
+#wp-calendar #prev,
+#wp-calendar #next {
+
+}
+#wp-calendar tbody .pad {
+
+}
+
+/* =Site Footer
+----------------------------------------------- */
+
+footer {
+	background-color: #363636;
+	color: #FFFFFF;
+	padding: 20px;
+}
+
+footer h3 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+footer a,
+footer a:hover,
+footer a:visited,
+footer p,
+footer ul,
+footer ol,
+footer li {
+	color: #FFFFFF;
+}
+
+footer a {
+	text-decoration: underline;
+}
+
+.footer-strip {
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 10px;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.footer-strip a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#copyright a {
+	color: #FFFFFF;
+}
+
+
+/* CLEARFIX -------------- */
+/* USE THIS TO MAKE SURE CONTAINERS DON'T COLLAPSE WHEN THEY HAVE FLOATED ELEMENTS IN THEM */
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* =Responsive Structures
+----------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+	#content,
+	#primary,
+	#secondary,
+	#tertiary { /* Remove floats on all structural elements for smaller screens */
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+	#primary,
+	#secondary,
+	#tertiary { /* Make all structural elements full-width */
+		width: 100%;
+	}
+}
+
+
+/* =Grid Structures
+----------------------------------------------- */
+
+/*.section
+splits up the page horizontally. You'll need a few of these to break up the content, and you can use them in your main wrapper, or within other divs.
+
+.col
+divides the section into columns. Each column has a left margin except the first one. Using .col:first-child { margin-left: 0; } means you don't need to use class="last" anywhere. It works in all browsers since IE6.
+
+.group
+solves floating problems, by forcing the section to self clear its children (aka the clearfix hack). This is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.*/
+
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0% 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:"";  display:table;}
+
+.group { /*zoom:1;  For IE 6/7 */ } 
+.group:after { clear:both;}
+
+/*  GRID OF TWELVE  */
+.span_12_of_12 {
+	width: 100%;
+}
+
+.span_11_of_12 {
+  	width: 91.53%;
+}
+.span_10_of_12 {
+  	width: 83.06%;
+}
+
+.span_9_of_12 {
+  	width: 74.6%;
+}
+
+.span_8_of_12 {
+  	width: 66.13%;
+}
+
+.span_7_of_12 {
+  	width: 57.66%;
+}
+
+.span_6_of_12 {
+  	width: 49.2%;
+}
+
+.span_5_of_12 {
+  	width: 40.73%;
+}
+
+.span_4_of_12 {
+  	width: 32.26%;
+}
+
+.span_3_of_12 {
+  	width: 23.6%;
+}
+
+.span_2_of_12 {
+  	width: 15.33%;
+}
+
+.span_1_of_12 {
+  	width: 6.866%;
+}
+
+
+/*  GO MID WIDTH 480-768 PIXELS */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	.col {  
+		margin: 1% 0 1% 0%; 
+	}
+    
+    .span_1_of_12, 
+    .span_2_of_12 {
+		width: 25%; 
+	}
+
+    .span_3_of_12,
+    .span_4_of_12, 
+    .span_5_of_12,
+	.span_6_of_12,
+    .span_7_of_12, 
+    .span_8_of_12,
+    .span_9_of_12,
+    .span_10_of_12, 
+    .span_11_of_12, 
+    .span_12_of_12 {
+		width: 100%; 
+	}
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  
+		margin: 1% 0 1% 0%; 
+	}
+    
+    .span_1_of_12, 
+    .span_2_of_12, 
+    .span_3_of_12, 
+    .span_4_of_12, 
+    .span_5_of_12, 
+    .span_6_of_12, 
+    .span_7_of_12, 
+    .span_8_of_12, 
+    .span_9_of_12, 
+    .span_10_of_12, 
+    .span_11_of_12, 
+    .span_12_of_12 {		
+		width: 100%; 
+	}
+
+}
+
+/* OTHER MEDIA STYLES ------------ */
+
+@media only screen and (max-width: 768px) {
+
+	.page-container {
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+
+	.widget {
+		margin: 30px 0px 20px 0px;
+	}
+}
