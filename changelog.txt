@@ -1,0 +1,15 @@
+Sell Your Thing
+
+Version 1.1
+7/20/16
+---------------------------------------
+
+- Updated WordPress theme tags to match current requirements
+- Improved the behavior of the social icons widget
+
+Version 1.2
+7/26/16
+---------------------------------------
+
+- PHP adjustments in functions.php to better comply with official WordPress guidelines
+- Updated a few translation support bugs

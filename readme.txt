@@ -49,13 +49,13 @@ DOCUMENTATION
 ------------------------------
 
 Documentation for this theme is available at:
-http://www.zenwebthemes.com/documentation/sell-your-thing/
+https://www.zenwebthemes.com/documentation/sell-your-thing/
 
 ------------------------------
 HOW TO GET HELP
 ------------------------------
 
-Please go to https://www.zenwebthemes.com/support/ to see all of the support options.
+Please go to https://www.zenwebthemes.com/theme-support/ to see all of the support options.
 
 ------------------------------
 UPDATES AND FREEBIES
