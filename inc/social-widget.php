@@ -37,14 +37,14 @@ class social_Widget extends WP_Widget {
       echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
     }
  
-    $facebook = $instance['facebook'];
-    $twitter = $instance['twitter'];
-    $pinterest = $instance['pinterest'];
-    $instagram = $instance['instagram'];
-    $googleplus = $instance['googleplus'];
-    $tumblr = $instance['tumblr'];
-    $youtube = $instance['youtube'];
-    $linkedin = $instance['linkedin'];
+    $facebook = esc_url( $instance['facebook'] );
+    $twitter = esc_url( $instance['twitter'] );
+    $pinterest = esc_url( $instance['pinterest'] );
+    $instagram = esc_url( $instance['instagram'] );
+    $googleplus = esc_url( $instance['googleplus'] );
+    $yelp = esc_url( $instance['yelp'] );
+    $youtube = esc_url( $instance['youtube'] );
+    $linkedin = esc_url( $instance['linkedin'] );
 
     if ( ! empty( $instance['facebook'] ) ) {
       echo sprintf( '<a href="' . $facebook . '"><i class="fa fa-facebook-square"></i></a>');
@@ -90,14 +90,14 @@ class social_Widget extends WP_Widget {
    */
   public function form( $instance ) {
 
-    $facebook = ! empty( $instance['facebook'] ) ? $instance['facebook'] : __( 'https://www.facebook.com', 'sell-your-thing-free' );
-    $twitter = ! empty( $instance['twitter'] ) ? $instance['twitter'] : __( 'https://www.twitter.com', 'sell-your-thing-free' );
-    $pinterest = ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : __( 'https://www.pinterest.com', 'sell-your-thing-free' );
-    $instagram = ! empty( $instance['instagram'] ) ? $instance['instagram'] : __( 'https://www.instagram.com', 'sell-your-thing-free' );
-    $googleplus = ! empty( $instance['googleplus'] ) ? $instance['googleplus'] : __( 'https://plus.google.com', 'sell-your-thing-free' );
-    $tumblr = ! empty( $instance['tumblr'] ) ? $instance['tumblr'] : __( 'https://www.tumblr.com', 'sell-your-thing-free' );
-    $youtube = ! empty( $instance['youtube'] ) ? $instance['youtube'] : __( 'https://www.youtube.com', 'sell-your-thing-free' );
-    $linkedin = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : __( 'https://www.linkedin.com', 'sell-your-thing-free' );
+    $facebook = ! empty( $instance['facebook'] ) ? $instance['facebook'] : __( '', 'sell-your-thing-free' );
+    $twitter = ! empty( $instance['twitter'] ) ? $instance['twitter'] : __( '', 'sell-your-thing-free' );
+    $pinterest = ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : __( '', 'sell-your-thing-free' );
+    $instagram = ! empty( $instance['instagram'] ) ? $instance['instagram'] : __( '', 'sell-your-thing-free' );
+    $googleplus = ! empty( $instance['googleplus'] ) ? $instance['googleplus'] : __( '', 'sell-your-thing-free' );
+    $tumblr = ! empty( $instance['tumblr'] ) ? $instance['tumblr'] : __( '', 'sell-your-thing-free' );
+    $youtube = ! empty( $instance['youtube'] ) ? $instance['youtube'] : __( '', 'sell-your-thing-free' );
+    $linkedin = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : __( '', 'sell-your-thing-free' );
     ?>
 
     <p>
