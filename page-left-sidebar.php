@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Right Sidebar
+/* Template Name: Left Sidebar
 */
 ?>
 <?php get_header(); ?>
@@ -7,6 +7,10 @@
 <div class="page-container">
 
   <div class="section group">
+
+    <div class="col span_4_of_12">
+      <?php get_sidebar( 'page' ); ?>
+    </div>
 
     <div class="col span_8_of_12">
       
@@ -25,9 +29,7 @@
 
     </div>
 
-    <div class="col span_4_of_12">
-      <?php get_sidebar( 'page' ); ?>
-    </div>
+    
 
   </div>
 

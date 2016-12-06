@@ -377,4 +377,32 @@
         } );
     });
 
+    wp.customize( 'sellthing_h1_font_type', function( value ) {
+        value.bind( function( to ) {            
+            $( 'h1' ).css( 'font-family', to );  
+            $( 'h2' ).css( 'font-family', to );  
+            $( 'h3' ).css( 'font-family', to );  
+            $( 'h4' ).css( 'font-family', to );
+            $( 'h5' ).css( 'font-family', to );
+            $( 'h6' ).css( 'font-family', to );
+        } );
+    }); 
+
+    wp.customize( 'sellthing_p_font_type', function( value ) {
+        value.bind( function( to ) {            
+            $( 'p' ).css( 'font-family', to ); 
+            $( 'a' ).css( 'font-family', to );
+            $( 'li' ).css( 'font-family', to );
+            $( 'button' ).css( 'font-family', to );          
+        } );
+    });
+
+    wp.customize( 'sellthing_icons_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.features .fa' ).css( 'color', to );
+            $( '.four-icons .fa' ).css( 'color', to );
+         } );
+
+    });
+
 })( jQuery );

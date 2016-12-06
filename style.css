@@ -1,14 +1,14 @@
 /*
-Theme Name: Sell Your Thing Free
+Theme Name: Sell Your Thing
 Theme URI: https://www.zenwebthemes.com/shop-themes/sell-your-thing/
 Author: Bonnie Martin
 Author URI: https://www.zenwebthemes.com
-Description: Sell Your Thing helps you sell your app, ebook, or other digital product on WordPress. This is the free version.
+Description: Sell Your Thing helps you sell your app, ebook, or other digital product on WordPress.
 Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: two-columns, right-sidebar, custom-header, custom-menu, featured-images, footer-widgets, theme-options
-Text Domain: sell-your-thing-free
+Tags: two-columns, left-sidebar, right-sidebar, full-width-template, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, theme-options
+Text Domain: sell-your-thing
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -953,7 +953,6 @@ body.archive .page-title { /* Optional, if you want your page titles to look dif
 ----------------------------------------------- */
 
 /* Styling for images and videos */
-
 .site-header img,
 .entry-content img,
 .comment-content img,
@@ -1020,7 +1019,6 @@ img.size-full {
 }
 
 /* Make sure embeds and iframes fit their containers */
-
 embed,
 iframe,
 object {
@@ -1150,6 +1148,14 @@ p.nocomments { /* Message displayed when there are no comments */
 
 /* =Widgets
 ----------------------------------------------- */
+
+/* End of Posts Widget */
+
+.endofpost {
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 10px;
+}
 
 /* Footer Widgets */
 

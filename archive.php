@@ -40,10 +40,10 @@
         <?php endwhile; else: ?>
 
         <div class="page-header">
-            <h1 class="page-title"><?php _e( 'Oh no!', 'sell-your-thing-free' ); ?></h1>
+            <h1 class="page-title"><?php _e( 'Oh no!', 'sell-your-thing' ); ?></h1>
         </div>
 
-        <p><?php _e( 'No content is appearing for this page!', 'sell-your-thing-free' ); ?></p>
+        <p><?php _e( 'No content is appearing for this page!', 'sell-your-thing' ); ?></p>
          
          <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>></div> 
 

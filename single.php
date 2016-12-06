@@ -28,14 +28,14 @@
 
       <?php
         $defaults = array(
-          'before'           => '<p>' . __( 'Pages:', 'sell-your-thing-free' ),
+          'before'           => '<p>' . __( 'Pages:', 'sell-your-thing' ),
           'after'            => '</p>',
           'link_before'      => '',
           'link_after'       => '',
           'next_or_number'   => 'number',
           'separator'        => ' ',
-          'nextpagelink'     => __( 'Next page', 'sell-your-thing-free' ),
-          'previouspagelink' => __( 'Previous page', 'sell-your-thing-free' ),
+          'nextpagelink'     => __( 'Next page', 'sell-your-thing' ),
+          'previouspagelink' => __( 'Previous page', 'sell-your-thing' ),
           'pagelink'         => '%',
           'echo'             => 1
         );
